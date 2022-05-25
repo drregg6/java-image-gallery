@@ -1,2 +1,1 @@
-# java-image-gallery
-Cloud Computing project
+# EC2 Image Gallery Powered by Java
