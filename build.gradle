@@ -21,8 +21,10 @@ repositories {
 }
 
 dependencies {
-    implementation platform("software.amazon.awssdk:bom:2.15.0")
-    implementation "software.amazon.awssdk:s3"
+    implementation platform('software.amazon.awssdk:bom:2.15.0')
+    implementation 'software.amazon.awssdk:s3'
+
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.12'
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
