@@ -64,6 +64,7 @@ public class DB {
 	// Get a single user from the database
 	public String getUser(String username) throws SQLException {
 		String res = "";
+		username = username.toLowerCase();
 		// If database can find user - return user
 		PreparedStatement ps = connection.prepareStatement("select * from users where username=?");
 		ps.setString(1, username);
@@ -83,6 +84,7 @@ public class DB {
 
 	// Add a user to the database
 	public void addUser(String username, String password, String fullName) throws SQLException {
+		username = username.toLowerCase();
 		// Prepare statement
 		PreparedStatement ps = connection.prepareStatement("insert into users (username, password, full_name) values (?, ?, ?)");
 		ps.setString(1, username);
@@ -95,6 +97,7 @@ public class DB {
 
 	// Update a user
 	public void updateUser(String username, String password, String fullName) throws SQLException {
+		username = username.toLowerCase();
 		// Prepare the statement
 		PreparedStatement ps = connection.prepareStatement("update users set password=?, full_name=? where username=?");
 		ps.setString(1, password);
@@ -107,6 +110,7 @@ public class DB {
 
 	// Delete a user
 	public void deleteUser(String username) throws SQLException {
+		username = username.toLowerCase();
 		// If deletion is successful - return true
 		PreparedStatement ps = connection.prepareStatement("delete from users where username=?");
 		ps.setString(1, username);

@@ -32,5 +32,9 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClassName = 'edu.au.cc.gallery.App'
+    mainClassName = 'edu.au.cc.gallery.tools.UserAdmin'
 }
+
+// run {
+//     standardInput = System.in
+// }
